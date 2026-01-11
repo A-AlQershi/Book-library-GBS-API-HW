@@ -1,0 +1,23 @@
+.banner {
+  background-color: #efefff;
+  background-image: url("/src/assets/library.jpg");
+  background-size: cover;
+  background-position:top;
+  background-blend-mode: luminosity;
+  padding: 6px 0px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo{
+  font-family:cursive;
+  font-weight: bolder;
+  font-size:4.5em;
+  -webkit-text-stroke: 1px black;
+  filter: drop-shadow(0 0 0.3em black);
+  text-align: center;
+  color: white;
+  font-style: oblique;
+}

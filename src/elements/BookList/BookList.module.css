@@ -1,0 +1,87 @@
+.bookList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shelf{
+  max-width: 885px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+.shelfNoContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-grow: 2;
+}
+.shelfNoContent img{
+  height: 300px;
+}
+.book{
+  background-color: #e0e0e0;
+  border: solid 1px black;
+  border-radius: 20px;
+  width: 200px;
+  height: 250px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.4s ease-in-out;
+}
+.book:hover {
+  filter: drop-shadow(0 0 1em black);
+  transform: scale(1.05);
+  transition: all 0.4s ease-in-out;
+}
+.bookDetails{
+  max-width: 190px;
+  text-wrap: wrap;
+}
+.thumbnail{
+  width: auto;
+  max-width: 180px;
+  max-height: 150px;
+  background-color: gray;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 0.1em black);
+}
+p{
+  font-size: small;
+}
+span{
+  font-weight: bold;
+}
+.shelfMessage{
+  font-size: xx-large;
+  font-weight: bold;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.pagination p{
+  font-size: large;
+}
+.elementsPerPage{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.elementsPerPage p{
+  margin-left: 10px;
+  font-size: medium;
+}
+.elementsPerPage select{
+  width: 45px;
+}
