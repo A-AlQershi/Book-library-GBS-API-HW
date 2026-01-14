@@ -1,7 +1,11 @@
 import styles from "./BookList.module.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import stringShortener from "/src/utils/stringShortener";
+import stringShortener from "../../utils/stringShortener";
+import searchImage from "../../assets/search.svg";
+import noResultImage from "../../assets/no-result.png";
+import errorImage from "../../assets/error.png";
+import loadingImage from "../../assets/loading.gif";
 
 const BookList = ({ searchQuery, category }) => {
   const [books, setBooks] = useState([]);
@@ -65,28 +69,28 @@ const BookList = ({ searchQuery, category }) => {
     return (
       <div className={styles.shelfNoContent}>
         <p className={styles.shelfMessage}>Fetching Knowledge ...</p>
-        <img src="/src/assets/loading.gif" alt="loading" />
+        <img src={loadingImage} alt="loading" />
       </div>
     );
   } else if (errorFetch) {
     return (
       <div className={styles.shelfNoContent}>
         <p className={styles.shelfMessage}>NETWORK ERROR!</p>
-        <img src="/src/assets/error.png" alt="NETWORK ERROR!" />
+        <img src={errorImage} alt="NETWORK ERROR!" />
       </div>
     );
   } else if (searchQuery && books.length === 0) {
     return (
       <div className={styles.shelfNoContent}>
         <p className={styles.shelfMessage}>No results found!</p>
-        <img src="/src/assets/no-result.png" alt="no results found" />
+        <img src={noResultImage} alt="no results found" />
       </div>
     );
   } else if (!searchQuery) {
     return (
       <div className={styles.shelfNoContent}>
         <p className={styles.shelfMessage}>Try searching for a book</p>
-        <img src="/src/assets/search.svg" alt="search for a book" />
+        <img src={searchImage} alt="search for a book" />
       </div>
     );
   } else {

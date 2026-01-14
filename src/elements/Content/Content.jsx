@@ -3,7 +3,7 @@ import SearchTerms from "../SearchTerms/SearchTerms";
 import BookList from "../BookList/BookList";
 import { useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import Fallback, { logError } from "/src/elements/Fallback/Fallback";
+import Fallback, { logError } from "../Fallback/Fallback";
 
 function Content() {
   const [searchQuery, setSearchQuery] = useState("");
