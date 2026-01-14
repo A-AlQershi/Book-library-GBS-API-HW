@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/your-new-repo-name/",
+  base: "/Aden_Grand_Library/",
 
   plugins: [react()],
   test: {
